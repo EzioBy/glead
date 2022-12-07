@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>GLeaD</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="title", style="padding-top: 35pt;min-width: 200px;">  <!-- Set padding as 10 if title is with two lines. -->
+      GLeaD: Improving GANs with A Generator-Leading Task
+    </div>
+   <!-- <h2 style="font-size:20px;text-align:center;"> ArXiv 2022 <h2> -->
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <a href="https://scholar.google.com/citations?user=xUMjxi4AAAAJ&hl=zh-CN" target="_blank">Qingyan Bai</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://ceyuan.me/" target="_blank">Ceyuan Yang</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+    <a href="https://justimyhxu.github.io" target="_blank">Yinghao Xu</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://xh-liu.github.io/" target="_blank">Xihui Liu</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://sites.google.com/view/iigroup-thu" target="_blank">Yujiu Yang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://shenyujun.github.io/" target="_blank">Yujun Shen</a><sup>5</sup>
+  </div>
+  <div class="institution">
+    <sup>1</sup> Tsinghua University&nbsp;&nbsp;&nbsp;&nbsp;
+    <sup>2</sup> Shanghai AI Laboratory&nbsp;&nbsp;&nbsp;&nbsp;
+    <sup>3</sup> The Chinese University of Hong Kong&nbsp;&nbsp;&nbsp;&nbsp;<br>
+    <sup>4</sup> The University of Hong Kong &nbsp;&nbsp;&nbsp;&nbsp;
+    <sup>5</sup> Ant Group<br>
+  </div>
+  <div class="link">
+    <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">[Paper]</a>&nbsp;&nbsp;
+    <a href="https://github.com/EzioBy/glead" target="_blank">[Code]</a>
+
+  </div>
+  <div class="teaser">
+    <img src="./assets/teaser.png">
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+    This work aims at improving Generative adversarial network (GAN) with a generator-leading task. GAN is formulated as a two-player game between a generator (G) and a discriminator (D), where D is asked to differentiate whether an image comes from real data or is produced by G. Under such a formulation, D plays as the rule maker and hence tends to dominate the competition. Towards a fairer game in GANs, we propose a new paradigm for adversarial training, which makes <b>G assign a task to D</b> as well. Specifically, given an image, we expect D to extract representative features that can be adequately decoded by G to reconstruct the input. That way, instead of learning freely, D is urged to align with the view of G for domain classification.
+      <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/framework.png" width="90%"></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Results</div>
+  <div class="body">
+
+    Quantitative comparisons on FFHQ, LSUN Bedroom and LSUN Church. P and R in the table respectively denote precision and recall.
+    Our method improves StyleGAN2 in large datasets in terms of FID and recall. Combined with GGDR (Ours* in the table),
+    GLeaD could further introduce significant gains, achieving new state-of-the-art performance on various datasets.
+
+
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/quantitative_results.png" width="96%"></td>
+      </tr>
+    </table>
+
+    Synthesized images by our models respectively trained on FFHQ, LSUN Bedroom and Church.
+
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/face.png" width="75%"></td>
+      </tr>
+    </table>
+        <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/bedroom.png" width="75%"></td>
+      </tr>
+    </table>
+        <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/church.png" width="75%"></td>
+      </tr>
+    </table>
+
+
+
+    Reconstruction results of real and synthesized input images.
+    These results indicate that our D could learn features <b>aligned with the domain of G</b>, matching our motivation.
+
+
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/rec_vis.png" width="55%"></td>
+      </tr>
+    </table>
+
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+@article{bai2022glead,
+  title   = {GLeaD: Improving GANs with A Generator-Leading Task},
+  author  = {Bai, Qingyan and Yang, Ceyuan and Xu, Yinghao and Liu, Xihui and Yang, Yujiu and Shen, Yujun},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2022}
+}
+</pre>
+
+  <!-- BZ: we should give other related work enough credits, -->
+  <!--     so please include some most relevant work and leave some comment to summarize work and the difference. -->
+  <div class="ref">Related Work</div>
+
+  <div class="citation">
+    <div class="image"><img src="./assets/ggdr.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/abs/2207.13320" target="_blank">
+        Gayoung Lee, Hyunsu Kim, Junho Kim, Seonghyeon Kim, Jung-Woo Ha, Yunjey Choi.
+        Generator Knows What Discriminator Should Learn in Unconditional GANs.
+        ECCV 2022.</a><br>
+      <b>Comment:</b>
+      Proposes to leverage the feature map of G to supervise the output features of D.
+    </div>
+  </div>
+
+  <div class="citation">
+    <div class="image"><img src="./assets/BiGAN.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/abs/1605.09782" target="_blank">
+        Jeff Donahue, Philipp Krähenbühl, Trevor Darrell.
+        Adversarial Feature Learning.
+        ICLR 2017.</a><br>
+      <b>Comment:</b>
+      Proposes to learn an additional encoder to project real samples back into GAN's latent space, and discriminate samples jointly in data and latent space.
+    </div>
+  </div>
+
+  <div class="citation">
+    <div class="image"><img src="./assets/EqGAN.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/abs/2112.00718" target="_blank">
+        Jianyuan Wang, Ceyuan Yang, Yinghao Xu, Yujun Shen, Hongdong Li, Bolei Zhou.
+        Improving GAN Equilibrium by Raising Spatial Awareness.
+        CVPR 2022.</a><br>
+      <b>Comment:</b>
+      Proposes to boost GAN equilibrium by raising the spatial awareness of G.
+    </div>
+  </div>
+
+
+
+</div>
+<!-- === Reference Section Ends === -->
+
+</body>
+</html>
