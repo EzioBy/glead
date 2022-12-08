@@ -15,7 +15,7 @@ in the original formulation of GANs (upper). D is required to
 extract representative features that can be adequately decoded by
 G to reconstruct the input.
 
-**[**[**Paper**](https://arxiv.org/abs/xxxx.xxxxx)**]**
+**[**[**Paper**](https://arxiv.org/abs/2212.03752)**]**
 **[**[**Project Page**](https://ezioby.github.io/glead/)**]**
 
 This work aims at improving Generative adversarial network (GAN) with a generator-leading task. 
@@ -33,3 +33,15 @@ That way, instead of learning freely, D is urged to align with the view of G for
 
 ## Quantitative Results
 ![image](./docs/assets/quantitative_results.png)
+
+## BibTeX
+
+If you find our work helpful for your research, please consider to cite:
+```bibtex
+@article{bai2022glead,
+  title   = {GLeaD: Improving GANs with A Generator-Leading Task},
+  author  = {Bai, Qingyan and Yang, Ceyuan and Xu, Yinghao and Liu, Xihui and Yang, Yujiu and Shen, Yujun},
+  journal = {arXiv preprint arXiv:2212.03752},
+  year    = {2022}
+}
+```
