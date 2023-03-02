@@ -2,7 +2,7 @@
 
 > **GLeaD: Improving GANs with A Generator-Leading Task** <br>
 > Qingyan Bai, Ceyuan Yang, Yinghao Xu, Xihui liu, Yujiu Yang, Yujun Shen <br>
-> ArXiv 2022
+> CVPR 2023
 
 <div align=center>
 <img src="./docs/assets/teaser.png" width=750px>
