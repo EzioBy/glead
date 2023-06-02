@@ -2,7 +2,7 @@
 
 > **GLeaD: Improving GANs with A Generator-Leading Task** <br>
 > Qingyan Bai, Ceyuan Yang, Yinghao Xu, Xihui liu, Yujiu Yang, Yujun Shen <br>
-> CVPR 2023
+> Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2023
 
 <div align=center>
 <img src="./docs/assets/teaser.png" width=750px>
@@ -31,17 +31,17 @@ That way, instead of learning freely, D is urged to align with the view of G for
 <img src="./docs/assets/framework.png" width=700px>
 </div>
 
-## Quantitative Results
-![image](./docs/assets/quantitative_results.png)
+
 
 ## BibTeX
 
 If you find our work helpful for your research, please consider to cite:
 ```bibtex
-@article{bai2022glead,
-  title   = {GLeaD: Improving GANs with A Generator-Leading Task},
-  author  = {Bai, Qingyan and Yang, Ceyuan and Xu, Yinghao and Liu, Xihui and Yang, Yujiu and Shen, Yujun},
-  journal = {arXiv preprint arXiv:2212.03752},
-  year    = {2022}
+@inproceedings{bai2023glead,
+    author    = {Bai, Qingyan and Yang, Ceyuan and Xu, Yinghao and Liu, Xihui and Yang, Yujiu and Shen, Yujun},
+    title     = {GLeaD: Improving GANs With a Generator-Leading Task},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year      = {2023},
+    pages     = {12094-12104}
 }
 ```
