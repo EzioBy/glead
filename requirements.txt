@@ -1,0 +1,15 @@
+torchvision==0.9.1+cu111
+protobuf~=3.19.0
+ninja==1.10.2.3
+numpy
+scipy
+scikit-learn
+pillow
+opencv-python-headless
+requests
+tqdm
+rich
+click
+psutil
+easydict
+lmdb
